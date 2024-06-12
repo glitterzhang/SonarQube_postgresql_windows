@@ -29,9 +29,12 @@ https://www.postgresql.org/download/windows/
   + create a user in PostgreSQL:sonar pw: 1234
  in directory "~\sonarqube-10.5.1.90531\conf"
 set
-**  sonar.jdbc.url=jdbc:postgresql://localhost/sonar?currentSchema=public
-  sonar.jdbc.username=sonar
-  sonar.jdbc.password=1234**
+
+```
+sonar.jdbc.url=jdbc:postgresql://localhost/sonar?currentSchema=public
+sonar.jdbc.username=sonar
+sonar.jdbc.password=1234
+```
 ### 7. Load SonarQube
    - click **StartSonar.bat** under "C:\Users\xx\sonarqube-10.5.1.90531\bin\windows-x86-64\"
      ![image](https://github.com/glitterzhang/SonarQube_postgresql_windows/assets/16975192/35e996c2-e20d-4ed2-80cc-2ad69d31d89e)
@@ -42,27 +45,29 @@ set
 1. creat project key
 ![image](https://github.com/glitterzhang/SonarQube_postgresql_windows/assets/16975192/79d73cda-d2fb-4ff0-898b-29eacb52448d)
 
-2. Use global setting
+2. Use `global setting`
 
-3. Set up the way of analysis- we use locally
+3. Set up the way of analysis- we use `locally`
     ![image](https://github.com/glitterzhang/SonarQube_postgresql_windows/assets/16975192/8724d6f3-9382-4288-bb6e-389eaab6a1cd)
 
-4. generate the token
+4. Generate the token
    ![image](https://github.com/glitterzhang/SonarQube_postgresql_windows/assets/16975192/ae6f58a5-4390-4759-8054-e81d3f8ac40b)
    ![image](https://github.com/glitterzhang/SonarQube_postgresql_windows/assets/16975192/0b50fdfc-65e1-4e94-adf2-86edfd03d5c0)
 5. Run analysis, our system is windows and all code are developed with python.
 ![image](https://github.com/glitterzhang/SonarQube_postgresql_windows/assets/16975192/814452bc-f265-4e3f-99ce-97327f8d629f)
 
  6. Before you run the analysis,set the proporties in sonar.properies in directory "~\sonarqube-10.5.1.90531\conf"
-sonar.login=admin
-sonar.password=adminpassword
-sonar.projectKey=test
-sonar.projectName=test
-sonar.projectVersion=1.0
-sonar.sources=~\projectdirectory
-sonar.projectBaseDir=\projectdirectory
-sonar.sourceEncoding=UTF-8
 
-7. Execute the above commands in step 5 "sonar-scann.bat ...." in your project's folder .
-8. If suceed, the result will display in the dashbord.
+```
+  sonar.login=admin
+  sonar.password=adminpassword
+  sonar.projectKey=test
+  sonar.projectName=test
+  sonar.projectVersion=1.0
+  sonar.sources=~\projectdirectory
+  sonar.projectBaseDir=\projectdirectory
+  sonar.sourceEncoding=UTF-8
+```
+8. Execute the above commands in step 5 "sonar-scann.bat ...." in your project's folder .
+9. If succeed, the result will be displayed on the dashbord.
 
