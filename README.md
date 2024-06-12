@@ -1,7 +1,7 @@
-# Setup SonarQube, postgresql and Sonar Scanner on windows for statistic analysis
+# Setup SonarQube, postgresql and Sonar Scanner on windows for static analysis
 
 ### 1. Documents:
-https://docs.sonarsource.com/sonarqube/latest/
+https://docs.sonarsource.com/sonarqube/latest/c
 
 ### 2. Three components:
 - Analyzer | A client application that analyzes the source code to compute snapshots.
